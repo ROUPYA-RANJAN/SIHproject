@@ -19,8 +19,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
     private  String fullName;
-    private  String Email;
-    private  String Password;
+    private  String email;
+    private  String password;
     private  User_Role role;
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
