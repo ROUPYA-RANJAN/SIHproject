@@ -19,7 +19,7 @@ public class Farm {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id ;
     @OneToOne
-    private user owner;
+    private User owner;
     private String name;
     private String description ;
     private String farmType ;
@@ -27,7 +27,7 @@ public class Farm {
     private Address address;
     @Embedded
     private ContactInfo ContactInformation;
-    @OneToOne(mappedBy = "farm",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "farm",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Order> orders=new ArrayList<>();
 
     @ElementCollection

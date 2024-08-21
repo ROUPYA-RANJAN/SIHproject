@@ -19,7 +19,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id ;
     @ManyToOne
-    private user customer;
+    private User customer;
     @JsonIgnore
     @ManyToOne
     private Farm farm;
