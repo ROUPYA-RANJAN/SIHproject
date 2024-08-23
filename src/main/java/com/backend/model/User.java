@@ -21,7 +21,7 @@ public class User {
     private  String fullName;
     private  String email;
     private  String password;
-    private  User_Role role;
+    private  User_Role role=User_Role.ROLE_CUSTOMER;
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     private List<Order> orders = new ArrayList<>();
